@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Asia Future Energy Summit 2025 — The premier conference for energy innovation, digitalisation, and sustainability leaders across Asia-Pacific. October 14–16, Singapore.">
+<title>Asia Future Energy Summit 2025 | Singapore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white:       #ffffff;
+    --off-white:   #f6faf7;
+    --surface:     #eef6f0;
+    --surface-2:   #e0efea;
+    --green:       #2ecc8a;
+    --green-dark:  #1aaa70;
+    --green-light: #a8edd0;
+    --green-pale:  #d4f5e6;
+    --green-xpale: #edfaf4;
+    --blue:        #1d6fd8;
+    --blue-mid:    #2980e8;
+    --blue-light:  #93c5fd;
+    --blue-pale:   #dbeafe;
+    --blue-xpale:  #eff6ff;
+    --ink:         #0d1f2d;
+    --ink-mid:     #1e3a4a;
+    --ink-light:   #3d5a6e;
+    --text-muted:  #6b8fa3;
+    --text-body:   #3d5a6e;
+    --border:      rgba(46,204,138,0.18);
+    --border-blue: rgba(29,111,216,0.15);
+    --radius:      6px;
+    --radius-lg:   12px;
+    --font-display:'Playfair Display', Georgia, serif;
+    --font-body:   'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--white); color: var(--text-body); line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 5%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(46,204,138,0.2);
+    box-shadow: 0 1px 20px rgba(29,111,216,0.06);
+  }
+  .nav-logo { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--blue); }
+  .nav-logo span { color: var(--green-dark); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--ink-light); text-decoration: none; font-size: 0.83rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta { background: var(--green); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 50px; text-decoration: none; font-size: 0.83rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.2s; box-shadow: 0 3px 12px rgba(46,204,138,0.3); }
+  .nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .nav-hamburger span { width: 24px; height: 2px; background: var(--blue); display: block; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; padding: 8rem 5% 5rem; background: var(--white); }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 70% 70% at 80% 30%, rgba(46,204,138,0.12) 0%, transparent 55%), radial-gradient(ellipse 50% 60% at 10% 80%, rgba(29,111,216,0.08) 0%, transparent 55%), linear-gradient(160deg, #ffffff 0%, #f0faf5 50%, #f0f7ff 100%); }
+  .hero-dots { position: absolute; inset: 0; z-index: 0; background-image: radial-gradient(circle, rgba(46,204,138,0.15) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black 0%, transparent 70%); }
+  .hero-orb-green { position: absolute; right: 8%; top: 12%; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(46,204,138,0.18) 0%, rgba(46,204,138,0.04) 50%, transparent 70%); filter: blur(30px); animation: floatOrb 7s ease-in-out infinite; }
+  .hero-orb-blue { position: absolute; right: 18%; top: 40%; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(29,111,216,0.12) 0%, transparent 70%); filter: blur(40px); animation: floatOrb 9s ease-in-out infinite reverse; }
+  @keyframes floatOrb { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+
+  .hero-content { position: relative; z-index: 1; max-width: 760px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green-xpale); border: 1px solid rgba(46,204,138,0.35); padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.5rem; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); animation: fadeUp 0.7s ease both; }
+  .hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: ping 1.5s infinite; }
+  @keyframes ping { 0%{box-shadow:0 0 0 0 rgba(46,204,138,0.5)} 100%{box-shadow:0 0 0 8px rgba(46,204,138,0)} }
+
+  .hero h1 { font-family: var(--font-display); font-size: clamp(2.6rem, 5.5vw, 5rem); font-weight: 700; line-height: 1.1; color: var(--ink); margin-bottom: 1.25rem; animation: fadeUp 0.7s 0.12s ease both; }
+  .hero h1 em { color: var(--blue); font-style: italic; }
+
+  .hero-sub { font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--text-body); max-width: 540px; margin-bottom: 2rem; font-weight: 400; line-height: 1.75; animation: fadeUp 0.7s 0.24s ease both; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2.5rem; animation: fadeUp 0.7s 0.36s ease both; }
+  .hero-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; color: var(--ink-light); font-weight: 500; }
+  .meta-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--blue-pale); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; animation: fadeUp 0.7s 0.48s ease both; }
+
+  .btn-primary { background: var(--green); color: var(--white); padding: 0.85rem 2rem; border-radius: 50px; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(46,204,138,0.35); display: inline-block; }
+  .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(46,204,138,0.45); }
+  .btn-blue { background: var(--blue); color: var(--white); padding: 0.85rem 2rem; border-radius: 50px; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(29,111,216,0.25); display: inline-block; }
+  .btn-blue:hover { background: var(--blue-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,111,216,0.35); }
+  .btn-outline { background: transparent; color: var(--ink-light); padding: 0.85rem 2rem; border-radius: 50px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(29,111,216,0.25); transition: all 0.2s; cursor: pointer; display: inline-block; }
+  .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+  .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); animation: fadeIn 1.5s 1s ease both; }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--green), transparent); animation: scrollAnim 2s ease-in-out infinite; }
+  @keyframes scrollAnim { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+  /* STATS BAR */
+  .stats-bar { background: var(--ink); padding: 2.5rem 5%; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 900px; margin: 0 auto; text-align: center; }
+  .stat-number { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--green); line-height: 1; }
+  .stat-label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.35rem; }
+
+  /* SECTIONS */
+  section { padding: 6rem 5%; }
+  .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.75rem; }
+  h2 { font-family: var(--font-display); font-size: clamp(1.9rem, 3.5vw, 2.9rem); font-weight: 700; color: var(--ink); line-height: 1.15; margin-bottom: 1.2rem; }
+  h2 em { color: var(--blue); font-style: italic; }
+  .section-intro { font-size: 1.02rem; color: var(--text-body); max-width: 620px; line-height: 1.8; }
+  .divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--green), var(--blue)); border-radius: 3px; margin: 1.2rem 0; }
+
+  /* ABOUT */
+  .about { background: var(--off-white); }
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .about-visual { position: relative; border-radius: var(--radius-lg); overflow: hidden; background: var(--white); border: 1px solid var(--border); box-shadow: 0 8px 40px rgba(46,204,138,0.1); padding: 3rem; text-align: center; min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+  .about-icon-main { font-size: 5rem; margin-bottom: 1rem; display: block; }
+  .about-visual-caption { font-family: var(--font-display); font-size: 1.15rem; color: var(--blue); font-style: italic; line-height: 1.5; }
+  .about-visual::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--green), var(--blue)); }
+
+  /* THEMES */
+  .themes { background: var(--white); }
+  .themes-header { text-align: center; margin-bottom: 3.5rem; }
+  .themes-header .section-intro { margin: 0 auto; }
+  .themes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .theme-card { background: var(--white); border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); padding: 2rem; transition: all 0.3s; cursor: default; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+  .theme-card:hover { border-color: var(--green); transform: translateY(-5px); box-shadow: 0 12px 32px rgba(46,204,138,0.15); }
+  .theme-icon-wrap { width: 52px; height: 52px; border-radius: 14px; background: var(--green-xpale); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem; }
+  .theme-card:nth-child(even) .theme-icon-wrap { background: var(--blue-xpale); }
+  .theme-title { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
+  .theme-desc { font-size: 0.87rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* AGENDA */
+  .agenda { background: var(--off-white); }
+  .agenda-inner { max-width: 900px; margin: 0 auto; }
+  .agenda-days { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .day-tab { padding: 0.5rem 1.5rem; border-radius: 50px; border: 1.5px solid var(--border); font-size: 0.83rem; font-weight: 600; cursor: pointer; color: var(--text-muted); transition: all 0.2s; background: var(--white); }
+  .day-tab.active, .day-tab:hover { background: var(--blue); color: var(--white); border-color: var(--blue); box-shadow: 0 4px 12px rgba(29,111,216,0.2); }
+  .agenda-list { display: flex; flex-direction: column; gap: 1rem; }
+  .agenda-item { display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem; align-items: start; padding: 1.5rem; background: var(--white); border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+  .agenda-item:hover { border-color: var(--green-light); box-shadow: 0 6px 20px rgba(46,204,138,0.12); }
+  .agenda-time { font-size: 0.82rem; color: var(--blue); font-weight: 700; letter-spacing: 0.03em; padding-top: 0.15rem; }
+  .agenda-session { font-weight: 600; color: var(--ink); font-size: 0.93rem; }
+  .agenda-speaker { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .agenda-tag { display: inline-block; padding: 0.18rem 0.65rem; border-radius: 50px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--green-pale); color: var(--green-dark); margin-top: 0.5rem; }
+  .agenda-tag.blue { background: var(--blue-pale); color: var(--blue); }
+  .agenda-tag.neutral { background: var(--surface); color: var(--text-muted); }
+
+  /* SPEAKERS */
+  .speakers { background: var(--white); }
+  .speakers-header { text-align: center; margin-bottom: 3.5rem; }
+  .speakers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; }
+  .speaker-card { text-align: center; padding: 2rem 1.5rem; background: var(--off-white); border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); transition: all 0.3s; }
+  .speaker-card:hover { border-color: var(--blue-light); transform: translateY(-5px); box-shadow: 0 12px 32px rgba(29,111,216,0.12); }
+  .speaker-avatar { width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; background: var(--blue-pale); border: 3px solid var(--white); box-shadow: 0 4px 16px rgba(29,111,216,0.15); }
+  .speaker-name { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+  .speaker-title { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+  .speaker-company { font-size: 0.78rem; color: var(--blue); margin-top: 0.3rem; font-weight: 600; }
+  .speaker-topic { font-size: 0.76rem; color: var(--green-dark); margin-top: 0.75rem; font-style: italic; font-weight: 500; }
+  .speakers-cta { text-align: center; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* WHO ATTENDS */
+  .who-attends { background: var(--ink); }
+  .who-attends h2 { color: var(--white); }
+  .who-attends .section-label { color: var(--green); }
+  .who-attends .section-intro { color: rgba(255,255,255,0.6); }
+  .who-inner { max-width: 1100px; margin: 0 auto; }
+  .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .who-card { padding: 2rem; border-radius: var(--radius-lg); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; }
+  .who-card:hover { background: rgba(46,204,138,0.06); border-color: rgba(46,204,138,0.2); transform: translateY(-3px); }
+  .who-icon-wrap { width: 48px; height: 48px; border-radius: 12px; background: var(--green-xpale); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
+  .who-card:nth-child(even) .who-icon-wrap { background: var(--blue-pale); }
+  .who-title { font-weight: 700; color: var(--white); margin-bottom: 0.4rem; font-size: 0.93rem; }
+  .who-desc { font-size: 0.84rem; color: rgba(255,255,255,0.5); line-height: 1.65; }
+
+  /* SPONSORS */
+  .sponsors { background: var(--off-white); }
+  .sponsors-inner { max-width: 1100px; margin: 0 auto; }
+  .sponsor-tier { margin-bottom: 2.5rem; }
+  .sponsor-tier-label { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1.5px solid var(--surface-2); }
+  .platinum .sponsor-tier-label { color: var(--blue); }
+  .gold-tier .sponsor-tier-label { color: var(--green-dark); }
+  .silver .sponsor-tier-label { color: var(--text-muted); }
+  .sponsor-logos { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .sponsor-logo { padding: 1rem 2rem; background: var(--white); border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); font-weight: 700; font-size: 0.85rem; color: var(--ink-light); letter-spacing: 0.03em; display: flex; align-items: center; justify-content: center; min-width: 150px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: all 0.2s; }
+  .sponsor-logo:hover { border-color: var(--green); box-shadow: 0 6px 20px rgba(46,204,138,0.1); }
+  .platinum .sponsor-logo { min-width: 200px; font-size: 0.95rem; border-color: rgba(29,111,216,0.2); }
+  .sponsor-benefits { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; box-shadow: 0 4px 24px rgba(46,204,138,0.08); }
+  .benefit-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .benefit-list li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.9rem; color: var(--text-body); }
+  .benefit-check { width: 20px; height: 20px; border-radius: 50%; background: var(--green-pale); color: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 900; flex-shrink: 0; margin-top: 0.1rem; }
+
+  /* NETWORKING */
+  .networking { background: var(--blue); }
+  .networking .section-label { color: var(--green-light); }
+  .networking h2 { color: var(--white); }
+  .networking .section-intro { color: rgba(255,255,255,0.75); }
+  .networking-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .network-features { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+  .network-feature { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .network-icon-wrap { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+  .network-text strong { display: block; color: var(--white); font-size: 0.93rem; margin-bottom: 0.3rem; }
+  .network-text span { font-size: 0.84rem; color: rgba(255,255,255,0.65); line-height: 1.65; }
+  .network-visual { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg); padding: 3rem; text-align: center; }
+  .network-num { font-family: var(--font-display); font-size: 4.5rem; font-weight: 700; color: var(--green); line-height: 1; }
+  .network-caption { font-size: 0.83rem; color: rgba(255,255,255,0.6); margin-top: 0.5rem; }
+  .network-sep { width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin: 1.5rem auto; }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--white); }
+  .testimonials-header { text-align: center; margin-bottom: 3.5rem; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .testimonial-card { background: var(--off-white); border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); padding: 2rem; transition: all 0.3s; }
+  .testimonial-card:hover { box-shadow: 0 8px 28px rgba(29,111,216,0.1); border-color: var(--blue-light); }
+  .quote-bar { width: 36px; height: 3px; background: linear-gradient(90deg, var(--green), var(--blue)); border-radius: 3px; margin-bottom: 1.25rem; }
+  .quote-text { font-size: 0.9rem; color: var(--text-body); line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; }
+  .quote-author { display: flex; align-items: center; gap: 0.75rem; }
+  .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--blue-pale); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+  .author-info strong { display: block; font-size: 0.84rem; color: var(--ink); font-weight: 700; }
+  .author-info span { font-size: 0.76rem; color: var(--text-muted); }
+
+  /* REGISTRATION */
+  .registration { background: linear-gradient(160deg, var(--off-white) 0%, var(--blue-xpale) 100%); position: relative; overflow: hidden; }
+  .registration::before { content: ''; position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(46,204,138,0.12) 0%, transparent 70%); pointer-events: none; }
+  .reg-header { text-align: center; margin-bottom: 3.5rem; }
+  .urgency-badge { display: inline-block; background: rgba(239,68,68,0.08); color: #dc2626; border: 1px solid rgba(239,68,68,0.25); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 920px; margin: 0 auto; }
+  .price-card { background: var(--white); border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center; transition: all 0.3s; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+  .price-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(29,111,216,0.12); }
+  .price-card.featured { border-color: var(--green); background: linear-gradient(160deg, #fff 0%, var(--green-xpale) 100%); }
+  .price-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--green), var(--blue)); color: var(--white); padding: 0.25rem 1.1rem; border-radius: 50px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+  .price-tier { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 0.75rem; }
+  .price-amount { font-family: var(--font-display); font-size: 3.2rem; font-weight: 700; color: var(--ink); line-height: 1; }
+  .price-currency { font-size: 1.2rem; vertical-align: top; margin-top: 0.7rem; display: inline-block; color: var(--text-muted); }
+  .price-period { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; }
+  .price-divider { width: 100%; height: 1px; background: var(--surface-2); margin: 1.5rem 0; }
+  .price-features { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; text-align: left; margin-bottom: 1.75rem; }
+  .price-features li { font-size: 0.84rem; color: var(--text-body); display: flex; gap: 0.6rem; align-items: flex-start; }
+  .pf-check { color: var(--green-dark); font-weight: 900; flex-shrink: 0; font-size: 0.8rem; }
+
+  /* ATTENDANCE FORM */
+  .attendance { background: linear-gradient(160deg, var(--off-white) 0%, var(--blue-xpale) 100%); position: relative; overflow: hidden; }
+  .attendance::before { content: ""; position: absolute; top: -100px; right: -100px; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, rgba(46,204,138,0.1) 0%, transparent 70%); pointer-events: none; }
+  .attendance-inner { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+  .attendance-header { text-align: center; margin-bottom: 3rem; }
+  .attendance-header .section-intro { margin: 0 auto; }
+  .att-form { background: var(--white); border-radius: 16px; padding: 3rem; box-shadow: 0 8px 48px rgba(29,111,216,0.1); border: 1.5px solid rgba(46,204,138,0.15); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.78rem; font-weight: 700; color: var(--ink-light); letter-spacing: 0.05em; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { padding: 0.75rem 1rem; border: 1.5px solid var(--surface-2); border-radius: var(--radius-lg); font-family: var(--font-body); font-size: 0.92rem; color: var(--ink); background: var(--off-white); transition: all 0.2s; outline: none; width: 100%; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); background: var(--white); box-shadow: 0 0 0 3px rgba(29,111,216,0.08); }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+  .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b8fa3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-sessions { margin-bottom: 1.25rem; }
+  .form-sessions-label { font-size: 0.78rem; font-weight: 700; color: var(--ink-light); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.75rem; display: block; }
+  .session-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .session-check { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; }
+  .session-check input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--green); cursor: pointer; flex-shrink: 0; }
+  .session-check span { font-size: 0.85rem; color: var(--text-body); }
+  .form-divider { height: 1px; background: var(--surface-2); margin: 1.5rem 0; }
+  .form-submit { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+  .form-note { font-size: 0.78rem; color: var(--text-muted); }
+  .form-note a { color: var(--blue); text-decoration: none; }
+  .form-success { display: none; text-align: center; padding: 3rem 2rem; }
+  .form-success .success-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+  .form-success h3 { font-family: var(--font-display); font-size: 1.8rem; color: var(--ink); margin-bottom: 0.75rem; }
+  .form-success p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+
+  /* FOOTER */
+  footer { background: var(--ink-mid); padding: 4rem 5% 2rem; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-logo { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+  .footer-logo span { color: var(--green); }
+  .footer-desc { font-size: 0.84rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 270px; }
+  .footer-social { display: flex; gap: 0.6rem; margin-top: 1.25rem; }
+  .social-link { width: 36px; height: 36px; border-radius: 9px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.8rem; font-weight: 700; transition: all 0.2s; }
+  .social-link:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+  .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green-light); font-weight: 700; margin-bottom: 1rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col ul li a { font-size: 0.84rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--white); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+  .footer-copy { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a { font-size: 0.76rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+  .footer-legal a:hover { color: var(--white); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 1rem 4%; }
+    .nav-links, .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+    .hero { padding: 7rem 4% 4rem; }
+    .hero-orb-green { width: 220px; height: 220px; right: -2%; top: 8%; }
+    .hero-orb-blue { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-inner { grid-template-columns: 1fr; }
+    .themes-grid { grid-template-columns: 1fr 1fr; }
+    .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+    .who-grid { grid-template-columns: 1fr 1fr; }
+    .networking-inner { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .sponsor-benefits { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-brand { grid-column: 1/-1; }
+    .agenda-item { grid-template-columns: 90px 1fr; }
+  }
+  @media (max-width: 480px) {
+    .themes-grid, .who-grid { grid-template-columns: 1fr; }
+    .speakers-grid { grid-template-columns: 1fr; max-width: 300px; margin-left: auto; margin-right: auto; }
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 1.5rem; font-family: var(--font-display); color: var(--ink); text-decoration: none; font-weight: 700; }
+  .mobile-menu a:hover { color: var(--blue); }
+  .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--ink); font-size: 2rem; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">AFES<span>2025</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#themes">Themes</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#register">Register</a></li>
+  </ul>
+  <a href="#register" class="nav-cta">Register Now</a>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#themes" onclick="toggleMenu()">Themes</a>
+  <a href="#agenda" onclick="toggleMenu()">Agenda</a>
+  <a href="#speakers" onclick="toggleMenu()">Speakers</a>
+  <a href="#sponsors" onclick="toggleMenu()">Sponsors</a>
+</div>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-orb-green"></div>
+  <div class="hero-orb-blue"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Asia's Premier Energy Forum
+    </div>
+    <h1>Powering Asia's<br><em>Energy Future</em></h1>
+    <p class="hero-sub">Where 2,500+ industry leaders, policymakers, and innovators converge to shape the transition toward a cleaner, smarter, and more resilient energy landscape across Asia-Pacific.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="meta-icon">📅</div>14–16 October 2025</div>
+      <div class="hero-meta-item"><div class="meta-icon">📍</div>Sands Expo, Singapore</div>
+      <div class="hero-meta-item"><div class="meta-icon">👥</div>2,500+ Attendees</div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#register" class="btn-primary">Register Now</a>
+      <a href="#" class="btn-blue">Submit Abstract</a>
+      <a href="#sponsors" class="btn-outline">Sponsor / Exhibit</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item"><div class="stat-number">2,500+</div><div class="stat-label">Attendees</div></div>
+    <div class="stat-item"><div class="stat-number">120+</div><div class="stat-label">Speakers</div></div>
+    <div class="stat-item"><div class="stat-number">80+</div><div class="stat-label">Exhibitors</div></div>
+    <div class="stat-item"><div class="stat-number">35+</div><div class="stat-label">Countries</div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-label">About the Summit</div>
+      <h2>Asia's Most Influential <em>Energy Gathering</em></h2>
+      <div class="divider"></div>
+      <p class="section-intro">The Asia Future Energy Summit (AFES) is the region's foremost conference dedicated to accelerating the energy transition. Now in its 8th edition, AFES brings together utilities, regulators, technology providers, financiers, and innovators to tackle the most pressing challenges reshaping Asia-Pacific's energy landscape.</p>
+      <br>
+      <p class="section-intro">From decarbonisation mandates to grid modernisation and energy security, AFES delivers actionable intelligence, strategic connections, and real-world case studies that drive decisions — not just conversations.</p>
+      <br>
+      <a href="#register" class="btn-primary" style="margin-top:1rem;">Secure Your Place</a>
+    </div>
+    <div class="about-visual">
+      <span class="about-icon-main">⚡</span>
+      <div class="about-visual-caption">"Where Policy Meets<br>Innovation Meets Capital"</div>
+      <br>
+      <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.65">Trusted by energy leaders across 35+ nations since 2017</p>
+    </div>
+  </div>
+</section>
+
+<section class="themes" id="themes">
+  <div class="themes-header">
+    <div class="section-label">Focus Areas</div>
+    <h2>Key <em>Themes</em> & Tracks</h2>
+    <p class="section-intro">Six powerful tracks. One strategic agenda. Dive deep into the topics shaping the future of energy across Asia-Pacific.</p>
+  </div>
+  <div class="themes-grid">
+    <div class="theme-card"><div class="theme-icon-wrap">🌱</div><div class="theme-title">Decarbonisation & Net Zero</div><div class="theme-desc">Pathways to carbon neutrality, emissions trading mechanisms, and cross-sector collaboration for achieving net-zero targets by 2050.</div></div>
+    <div class="theme-card"><div class="theme-icon-wrap">⚡</div><div class="theme-title">Renewables & Storage</div><div class="theme-desc">Solar, wind, hydrogen, and large-scale battery storage — financing, deployment strategies, and grid integration at scale.</div></div>
+    <div class="theme-card"><div class="theme-icon-wrap">🔌</div><div class="theme-title">Grid Modernisation</div><div class="theme-desc">Smart grids, demand response, microgrids, and distributed energy resources transforming legacy infrastructure.</div></div>
+    <div class="theme-card"><div class="theme-icon-wrap">💡</div><div class="theme-title">Digitalisation & AI</div><div class="theme-desc">AI-driven energy management, digital twins, predictive analytics, and data-driven grid optimisation shaping the utility of the future.</div></div>
+    <div class="theme-card"><div class="theme-icon-wrap">💰</div><div class="theme-title">Energy Finance & Investment</div><div class="theme-desc">Green bonds, blended finance, ESG criteria, and the capital flows accelerating Asia's clean energy transition.</div></div>
+    <div class="theme-card"><div class="theme-icon-wrap">🛡️</div><div class="theme-title">Energy Security & Policy</div><div class="theme-desc">Geopolitical dynamics, regulatory frameworks, supply chain resilience, and regional energy cooperation strategies.</div></div>
+  </div>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="agenda-inner">
+    <div class="section-label">Programme</div>
+    <h2>Agenda <em>Highlights</em></h2>
+    <div class="divider"></div>
+    <div class="agenda-days">
+      <button class="day-tab active">Day 1 — Oct 14</button>
+      <button class="day-tab">Day 2 — Oct 15</button>
+      <button class="day-tab">Day 3 — Oct 16</button>
+    </div>
+    <div class="agenda-list">
+      <div class="agenda-item"><div class="agenda-time">08:30 – 09:00</div><div><div class="agenda-session">Opening Keynote: Asia's Energy Crossroads</div><div class="agenda-speaker">Minister of Energy, Singapore Government</div><span class="agenda-tag">Keynote</span></div></div>
+      <div class="agenda-item"><div class="agenda-time">09:00 – 09:45</div><div><div class="agenda-session">Global Energy Transition Outlook 2030: Asia's Role</div><div class="agenda-speaker">Dr. Sarah Chen, IEA Asia Pacific Director</div><span class="agenda-tag">Keynote</span></div></div>
+      <div class="agenda-item"><div class="agenda-time">10:15 – 11:30</div><div><div class="agenda-session">Panel: Financing the Renewable Revolution — What Capital Wants</div><div class="agenda-speaker">GIC, Temasek, HSBC, ADB — moderated by Bloomberg NEF</div><span class="agenda-tag blue">Panel</span></div></div>
+      <div class="agenda-item"><div class="agenda-time">12:00 – 13:00</div><div><div class="agenda-session">Executive Luncheon: Utility Leaders Roundtable</div><div class="agenda-speaker">By invitation — CEOs & Directors only</div><span class="agenda-tag neutral">Networking</span></div></div>
+      <div class="agenda-item"><div class="agenda-time">14:00 – 15:30</div><div><div class="agenda-session">Innovation Showcase: 12 Startups Disrupting Energy</div><div class="agenda-speaker">Curated by the AFES Innovation Council</div><span class="agenda-tag">Innovation</span></div></div>
+      <div class="agenda-item"><div class="agenda-time">17:30 – 20:00</div><div><div class="agenda-session">AFES Opening Gala & Awards Ceremony</div><div class="agenda-speaker">Marina Bay Sands Skypark</div><span class="agenda-tag neutral">Social</span></div></div>
+    </div>
+    <br>
+    <a href="#" class="btn-blue">Download Full Agenda →</a>
+  </div>
+</section>
+
+<section class="speakers" id="speakers">
+  <div class="speakers-header">
+    <div class="section-label">Thought Leaders</div>
+    <h2>Featured <em>Speakers</em></h2>
+    <p class="section-intro" style="margin:0 auto">120+ world-class experts. Policymakers, CEOs, scientists, and innovators — all on one stage.</p>
+  </div>
+  <div class="speakers-grid">
+    <div class="speaker-card"><div class="speaker-avatar">🎤</div><div class="speaker-name">Dr. Sarah Chen</div><div class="speaker-title">Asia Pacific Director</div><div class="speaker-company">International Energy Agency</div><div class="speaker-topic">"Net Zero Asia: 2030 Critical Milestones"</div></div>
+    <div class="speaker-card"><div class="speaker-avatar">🌏</div><div class="speaker-name">Rajesh Nair</div><div class="speaker-title">Chief Strategy Officer</div><div class="speaker-company">Tata Power Renewables</div><div class="speaker-topic">"Scaling Solar: Lessons from 5GW"</div></div>
+    <div class="speaker-card"><div class="speaker-avatar">⚡</div><div class="speaker-name">Prof. Li Wei</div><div class="speaker-title">Director, Clean Energy Lab</div><div class="speaker-company">Nanyang Technological University</div><div class="speaker-topic">"AI-Driven Grid Optimisation"</div></div>
+    <div class="speaker-card"><div class="speaker-avatar">💼</div><div class="speaker-name">Mia Tanaka</div><div class="speaker-title">Head of Green Finance APAC</div><div class="speaker-company">HSBC</div><div class="speaker-topic">"$50B in Green Bonds: What's Next"</div></div>
+  </div>
+  <div class="speakers-cta">
+    <a href="#" class="btn-outline">View All 120+ Speakers →</a>
+    <a href="#" class="btn-blue">Submit Speaker Application →</a>
+  </div>
+</section>
+
+<section class="who-attends" id="attend">
+  <div class="who-inner">
+    <div class="section-label">Who Attends</div>
+    <h2 style="color:var(--white)">Built For <span style="color:var(--green);font-style:italic">Decision-Makers</span></h2>
+    <p class="section-intro">AFES attracts the senior professionals and organisations shaping Asia's energy landscape.</p>
+    <div class="who-grid">
+      <div class="who-card"><div class="who-icon-wrap">🏭</div><div class="who-title">Utility Executives & Grid Operators</div><div class="who-desc">CEOs, COOs, and senior leaders from power utilities, TSOs, and DSOs navigating grid transformation.</div></div>
+      <div class="who-card"><div class="who-icon-wrap">🏛️</div><div class="who-title">Policymakers & Regulators</div><div class="who-desc">Energy ministers, regulatory bodies, and government agencies setting the rules of the energy transition.</div></div>
+      <div class="who-card"><div class="who-icon-wrap">💰</div><div class="who-title">Investors & Financiers</div><div class="who-desc">Infrastructure funds, green bond issuers, VCs, and development banks deploying clean energy capital.</div></div>
+      <div class="who-card"><div class="who-icon-wrap">🔬</div><div class="who-title">Technology Innovators</div><div class="who-desc">Startups, R&D labs, and technology providers developing next-generation energy solutions.</div></div>
+      <div class="who-card"><div class="who-icon-wrap">🌿</div><div class="who-title">Sustainability Leaders</div><div class="who-desc">Chief Sustainability Officers, ESG teams, and corporate energy buyers managing net-zero commitments.</div></div>
+      <div class="who-card"><div class="who-icon-wrap">🤝</div><div class="who-title">Consultants & Advisors</div><div class="who-desc">Strategy consultants, legal advisors, and sector analysts serving the broader energy ecosystem.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sponsors" id="sponsors">
+  <div class="sponsors-inner">
+    <div class="section-label">Partners & Exhibitors</div>
+    <h2>Our <em>Sponsors</em></h2>
+    <div class="divider"></div>
+    <div class="sponsor-tier platinum">
+      <div class="sponsor-tier-label">Platinum Sponsors</div>
+      <div class="sponsor-logos"><div class="sponsor-logo">Siemens Energy</div><div class="sponsor-logo">Shell</div><div class="sponsor-logo">ABB</div></div>
+    </div>
+    <div class="sponsor-tier gold-tier">
+      <div class="sponsor-tier-label">Gold Sponsors</div>
+      <div class="sponsor-logos"><div class="sponsor-logo">Schneider Electric</div><div class="sponsor-logo">Hitachi Energy</div><div class="sponsor-logo">Engie</div><div class="sponsor-logo">SPIE</div></div>
+    </div>
+    <div class="sponsor-tier silver">
+      <div class="sponsor-tier-label">Silver Sponsors</div>
+      <div class="sponsor-logos"><div class="sponsor-logo">EDF</div><div class="sponsor-logo">Vestas</div><div class="sponsor-logo">Eaton</div><div class="sponsor-logo">Fluence</div><div class="sponsor-logo">SunPower</div></div>
+    </div>
+    <div class="sponsor-benefits">
+      <div>
+        <h3 style="font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:1rem;">Why Partner with AFES?</h3>
+        <ul class="benefit-list">
+          <li><span class="benefit-check">✓</span>Direct access to 2,500+ qualified energy decision-makers</li>
+          <li><span class="benefit-check">✓</span>Premium exhibition space in high-traffic conference floor</li>
+          <li><span class="benefit-check">✓</span>Speaking opportunities and panel moderation</li>
+          <li><span class="benefit-check">✓</span>Branded business matching sessions with pre-qualified leads</li>
+          <li><span class="benefit-check">✓</span>Year-round digital brand presence across AFES channels</li>
+          <li><span class="benefit-check">✓</span>VIP dinner access and exclusive networking events</li>
+        </ul>
+      </div>
+      <div style="text-align:center">
+        <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1.5rem;line-height:1.7">Limited sponsorship packages available. Secure your position as Asia's energy transition partner.</p>
+        <a href="#" class="btn-primary" style="display:block;margin-bottom:0.75rem">Download Sponsor Pack</a>
+        <a href="#" class="btn-blue" style="display:block">Become a Sponsor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="networking" id="network">
+  <div class="networking-inner">
+    <div>
+      <div class="section-label">Business Matching</div>
+      <h2>Smarter <span style="color:var(--green-light);font-style:italic">Connections</span></h2>
+      <div class="divider"></div>
+      <p class="section-intro">AFES uses intelligent matchmaking technology to ensure every meeting counts. No more random networking — just purposeful conversations with the right people.</p>
+      <div class="network-features">
+        <div class="network-feature"><div class="network-icon-wrap">🎯</div><div class="network-text"><strong>AI-Powered Matchmaking</strong><span>Our algorithm analyses your profile, objectives, and interests to suggest the most relevant connections from the attendee pool.</span></div></div>
+        <div class="network-feature"><div class="network-icon-wrap">📅</div><div class="network-text"><strong>Pre-Scheduled 1:1 Meetings</strong><span>Book up to 20 private meetings before you arrive. Dedicated meeting lounges ensure focused, productive conversations.</span></div></div>
+        <div class="network-feature"><div class="network-icon-wrap">📱</div><div class="network-text"><strong>AFES Mobile App</strong><span>Manage your schedule, explore the exhibition floor map, message connections, and access session content — all in one place.</span></div></div>
+      </div>
+    </div>
+    <div class="network-visual">
+      <div class="network-num">3,200+</div>
+      <div class="network-caption">Meetings facilitated at AFES 2024</div>
+      <div class="network-sep"></div>
+      <div class="network-num" style="font-size:3.5rem">92%</div>
+      <div class="network-caption">Attendees rated networking "excellent"</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <div class="section-label">Social Proof</div>
+    <h2>What <em>Leaders</em> Say</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card"><div class="quote-bar"></div><p class="quote-text">AFES is simply the most valuable conference I attend each year. The calibre of speakers, the quality of peer conversations, and the deal flow generated is unmatched in the Asian energy space.</p><div class="quote-author"><div class="author-avatar">👤</div><div class="author-info"><strong>James Thornton</strong><span>CEO, Pacific Grid Solutions</span></div></div></div>
+    <div class="testimonial-card"><div class="quote-bar"></div><p class="quote-text">We signed three partnership agreements directly from introductions made at AFES 2024. The ROI is extraordinary. Our team returns every year without question.</p><div class="quote-author"><div class="author-avatar">👤</div><div class="author-info"><strong>Priya Mehta</strong><span>Head of Partnerships, SolarAsia</span></div></div></div>
+    <div class="testimonial-card"><div class="quote-bar"></div><p class="quote-text">As a policymaker, AFES gives me direct access to industry realities that inform better regulation. The off-stage discussions are as valuable as the main programme.</p><div class="quote-author"><div class="author-avatar">👤</div><div class="author-info"><strong>Dr. Anika Lim</strong><span>Deputy Secretary, Ministry of Energy</span></div></div></div>
+  </div>
+</section>
+
+<!-- ATTENDANCE FORM -->
+<section class="attendance" id="register">
+  <div class="attendance-inner">
+    <div class="attendance-header">
+      <div class="section-label">Attend the Summit</div>
+      <h2>Register Your <em>Attendance</em></h2>
+      <p class="section-intro">Secure your place at Asia's most influential energy gathering. Fill in your details below and our team will confirm your registration within 48 hours.</p>
+    </div>
+
+    <div class="att-form" id="attForm">
+
+      <form id="registrationForm">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="e.g. Sarah" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="e.g. Chen" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@organisation.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+65 9123 4567" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="organisation">Organisation *</label>
+            <input type="text" id="organisation" name="organisation" placeholder="e.g. Tata Power Renewables" required>
+          </div>
+          <div class="form-group">
+            <label for="jobTitle">Job Title *</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Chief Strategy Officer" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Select your country</option>
+              <option>Singapore</option>
+              <option>Malaysia</option>
+              <option>Indonesia</option>
+              <option>Thailand</option>
+              <option>Philippines</option>
+              <option>Vietnam</option>
+              <option>India</option>
+              <option>China</option>
+              <option>Japan</option>
+              <option>South Korea</option>
+              <option>Australia</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="attendeeType">I am attending as *</label>
+            <select id="attendeeType" name="attendeeType" required>
+              <option value="" disabled selected>Select category</option>
+              <option>Utility Executive / Grid Operator</option>
+              <option>Policymaker / Regulator</option>
+              <option>Investor / Financier</option>
+              <option>Technology Innovator / Startup</option>
+              <option>Sustainability Leader</option>
+              <option>Consultant / Advisor</option>
+              <option>Academic / Researcher</option>
+              <option>Media / Press</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="form-sessions">
+          <span class="form-sessions-label">Sessions of Interest (select all that apply)</span>
+          <div class="session-checks">
+            <label class="session-check"><input type="checkbox" name="sessions" value="Decarbonisation & Net Zero"><span>🌱 Decarbonisation & Net Zero</span></label>
+            <label class="session-check"><input type="checkbox" name="sessions" value="Renewables & Storage"><span>⚡ Renewables & Storage</span></label>
+            <label class="session-check"><input type="checkbox" name="sessions" value="Grid Modernisation"><span>🔌 Grid Modernisation</span></label>
+            <label class="session-check"><input type="checkbox" name="sessions" value="Digitalisation & AI"><span>💡 Digitalisation & AI</span></label>
+            <label class="session-check"><input type="checkbox" name="sessions" value="Energy Finance & Investment"><span>💰 Energy Finance & Investment</span></label>
+            <label class="session-check"><input type="checkbox" name="sessions" value="Energy Security & Policy"><span>🛡️ Energy Security & Policy</span></label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.25rem">
+          <label for="dietaryReq">Dietary Requirements</label>
+          <input type="text" id="dietaryReq" name="dietaryReq" placeholder="e.g. Vegetarian, Halal, None">
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.25rem">
+          <label for="message">Anything else you'd like us to know?</label>
+          <textarea id="message" name="message" placeholder="Special requests, questions, accessibility needs..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <p class="form-note">* Required fields. Your data is handled in accordance with our <a href="#">Privacy Policy</a>.</p>
+          <button type="submit" class="btn-primary">Submit Registration →</button>
+        </div>
+
+      </form>
+
+      <!-- Success message shown after submission -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✅</div>
+        <h3>Registration Received!</h3>
+        <p>Thank you for registering. Our team will confirm your place at AFES 2025 within 48 hours. Check your inbox for a confirmation email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Asia Future <span>Energy</span> Summit 2025</div>
+      <p class="footer-desc">The premier gathering for Asia-Pacific's energy transition leaders. Three days of intelligence, connection, and action in Singapore.</p>
+      <div class="footer-social">
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">fb</a>
+        <a class="social-link" href="#">yt</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About AFES</a></li>
+        <li><a href="#agenda">Full Agenda</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="#">Submit Abstract</a></li>
+        <li><a href="#">Sponsor / Exhibit</a></li>
+        <li><a href="#">Media Accreditation</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Partner with Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#4920272f2609282f2c3a7b797b7c672a2624"><span class="__cf_email__" data-cfemail="1970777f7659787f7c6a2b292b2c377a7674">[email&#160;protected]</span></a></li>
+        <li><a href="/cdn-cgi/l/email-protection#c4b7b4abaab7abb684a5a2a1b7f6f4f6f1eaa7aba9"><span class="__cf_email__" data-cfemail="9be8ebf4f5e8f4e9dbfafdfee8a9aba9aeb5f8f4f6">[email&#160;protected]</span></a></li>
+        <li><a href="#">+65 6123 4567</a></li>
+        <li><a href="#">Venue & Travel</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Asia Future Energy Summit. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  document.querySelectorAll('.day-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  function animateNumber(el, target, suffix) {
+    let start = 0;
+    const step = target / 60;
+    const interval = setInterval(() => {
+      start += step;
+      if (start >= target) { start = target; clearInterval(interval); }
+      el.textContent = Math.floor(start).toLocaleString() + suffix;
+    }, 16);
+  }
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const nums = entry.target.querySelectorAll('.stat-number');
+        nums[0] && animateNumber(nums[0], 2500, '+');
+        nums[1] && animateNumber(nums[1], 120, '+');
+        nums[2] && animateNumber(nums[2], 80, '+');
+        nums[3] && animateNumber(nums[3], 35, '+');
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  const statsBar = document.querySelector('.stats-bar');
+  if (statsBar) statsObserver.observe(statsBar);
+
+
+  // ── Power Automate Integration ──
+  // Paste your Power Automate HTTP trigger URL below
+  const POWER_AUTOMATE_URL = "https://default08f5913dd076402cad2189f61f125e.cd.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/f3304d99fb394afa924811af55a016dc/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OUdSOdEmNMV_7i8dR1SljUxA7QQ46a64s8aYVXcRmFY";
+
+  const form = document.getElementById("registrationForm");
+  if (form) {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector("button[type=submit]");
+      btn.textContent = "Submitting...";
+      btn.disabled = true;
+
+      // Collect checkbox values for sessions
+      const sessions = [...form.querySelectorAll('input[name="sessions"]:checked')]
+        .map(cb => cb.value).join(", ");
+
+      // Build JSON payload matching your SharePoint List columns
+      const payload = {
+        firstName:    form.firstName.value.trim(),
+        lastName:     form.lastName.value.trim(),
+        email:        form.email.value.trim(),
+        phone:        form.phone.value.trim(),
+        organisation: form.organisation.value.trim(),
+        jobTitle:     form.jobTitle.value.trim(),
+        country:      form.country.value,
+        attendeeType: form.attendeeType.value,
+        sessions:     sessions,
+        dietary:      form.dietaryReq.value.trim(),
+        message:      form.message.value.trim(),
+        submittedAt:  new Date().toISOString()
+      };
+
+      try {
+        const response = await fetch(POWER_AUTOMATE_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        // Power Automate returns 202 Accepted on success
+        if (response.ok || response.status === 202) {
+          form.style.display = "none";
+          document.getElementById("formSuccess").style.display = "block";
+        } else {
+          throw new Error("Server error: " + response.status);
+        }
+      } catch (err) {
+        console.error("Submission error:", err);
+        btn.textContent = "Submit Registration →";
+        btn.disabled = false;
+        alert("Something went wrong. Please try again or contact us at info@afes2025.com");
+      }
+    });
+  }
+</script>
+</body>
+</html>
