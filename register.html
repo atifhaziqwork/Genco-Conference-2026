@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Register for Asia Future Energy Summit 2025 — October 14–16, Singapore.">
+<title>Registration | Asia Future Energy Summit 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white:       #ffffff;
+    --off-white:   #f6faf7;
+    --surface-2:   #e0efea;
+    --green:       #2ecc8a;
+    --green-dark:  #1aaa70;
+    --green-light: #a8edd0;
+    --green-pale:  #d4f5e6;
+    --green-xpale: #edfaf4;
+    --blue:        #1d6fd8;
+    --blue-pale:   #dbeafe;
+    --ink:         #0d1f2d;
+    --ink-mid:     #1e3a4a;
+    --ink-light:   #3d5a6e;
+    --text-muted:  #6b8fa3;
+    --text-body:   #3d5a6e;
+    --radius:      10px;
+    --font-display:'Playfair Display', Georgia, serif;
+    --font-body:   'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--off-white);
+    color: var(--text-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid rgba(46,204,138,0.2);
+    box-shadow: 0 1px 16px rgba(29,111,216,0.07);
+    padding: 0.9rem 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    min-height: 60px;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--blue); text-decoration: none;
+    flex-shrink: 0;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .nav-logo span { color: var(--green-dark); }
+  /* Replace 'your-logo.png' with your logo filename (same folder as HTML) */
+  .nav-logo-img { height: 36px; width: auto; display: block; object-fit: contain; }
+  .nav-back {
+    display: flex; align-items: center; gap: 0.4rem;
+    color: var(--text-muted); text-decoration: none;
+    font-size: 0.82rem; font-weight: 600;
+    transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-back:hover { color: var(--blue); }
+
+  /* ── PAGE LAYOUT ── */
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    min-height: calc(100vh - 60px);
+  }
+
+  /* ── LEFT PANEL ── */
+  .left-panel {
+    background: linear-gradient(170deg, var(--ink) 0%, var(--ink-mid) 100%);
+    padding: 3rem 2.5rem;
+    position: sticky; top: 60px;
+    height: calc(100vh - 60px);
+    display: flex; flex-direction: column; gap: 2rem;
+    overflow-y: auto; overflow-x: hidden;
+  }
+  .left-panel::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(46,204,138,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .left-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(46,204,138,0.15); border: 1px solid rgba(46,204,138,0.3);
+    padding: 0.35rem 0.9rem; border-radius: 50px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--green-light); width: fit-content;
+  }
+  .left-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: ping 1.5s infinite; flex-shrink: 0; }
+  @keyframes ping { 0%{box-shadow:0 0 0 0 rgba(46,204,138,0.5)} 100%{box-shadow:0 0 0 8px rgba(46,204,138,0)} }
+
+  .left-panel h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    font-weight: 700; line-height: 1.2;
+    color: var(--white);
+  }
+  .left-panel h1 em { color: var(--green); font-style: italic; }
+  .left-panel > p { font-size: 0.87rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+  .event-details { display: flex; flex-direction: column; gap: 0.75rem; }
+  .event-detail {
+    display: flex; align-items: center; gap: 0.85rem;
+    padding: 0.85rem 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+  }
+  .event-detail-icon {
+    width: 34px; height: 34px; border-radius: 9px;
+    background: rgba(46,204,138,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.95rem; flex-shrink: 0;
+  }
+  .event-detail-text strong { display: block; font-size: 0.82rem; color: var(--white); font-weight: 600; line-height: 1.3; }
+  .event-detail-text span { font-size: 0.74rem; color: rgba(255,255,255,0.45); }
+
+  .left-steps-title {
+    font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.3); font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .left-steps { display: flex; flex-direction: column; gap: 0.75rem; }
+  .left-step { display: flex; align-items: flex-start; gap: 0.75rem; }
+  .step-num {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 800; color: var(--white);
+    flex-shrink: 0; margin-top: 0.12rem;
+  }
+  .step-text { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+  .step-text strong { color: rgba(255,255,255,0.88); display: block; font-size: 0.83rem; margin-bottom: 0.1rem; }
+
+  /* ── RIGHT PANEL ── */
+  .right-panel { padding: 3rem 3.5rem; background: var(--off-white); }
+
+  .form-header { margin-bottom: 2rem; }
+  .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.4rem; display: block; }
+  .form-header h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 700; color: var(--ink); line-height: 1.2; }
+  .form-header h2 em { color: var(--blue); font-style: italic; }
+  .form-header p { font-size: 0.87rem; color: var(--text-muted); margin-top: 0.4rem; }
+
+  /* ── FORM CARD ── */
+  .form-card {
+    background: var(--white); border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 32px rgba(29,111,216,0.07);
+    border: 1.5px solid rgba(46,204,138,0.12);
+  }
+
+  .form-section-title {
+    font-size: 0.7rem; font-weight: 700; color: var(--text-muted);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .form-section-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--surface-2);
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+
+  .form-group label {
+    font-size: 0.74rem; font-weight: 700;
+    color: var(--ink-light); letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--surface-2);
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 1rem; /* 1rem prevents iOS zoom on focus */
+    color: var(--ink);
+    background: var(--off-white);
+    transition: all 0.2s; outline: none; width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--blue);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(29,111,216,0.08);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--text-muted); font-size: 0.9rem; }
+  .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b8fa3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-color: var(--off-white);
+    padding-right: 2.5rem;
+  }
+  .form-group select:focus { background-color: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+
+  .form-divider { height: 1px; background: var(--surface-2); margin: 1.5rem 0; }
+
+  /* SESSION CHECKBOXES */
+  .session-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 1rem; }
+  .session-check {
+    display: flex; align-items: center; gap: 0.6rem;
+    cursor: pointer; padding: 0.65rem 0.85rem;
+    border-radius: var(--radius); border: 1.5px solid var(--surface-2);
+    background: var(--off-white); transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .session-check:hover,
+  .session-check:has(input:checked) { border-color: var(--green); background: var(--green-xpale); }
+  .session-check input[type="checkbox"] {
+    width: 16px; height: 16px;
+    accent-color: var(--green); cursor: pointer; flex-shrink: 0;
+  }
+  .session-check span { font-size: 0.82rem; color: var(--text-body); font-weight: 500; line-height: 1.3; }
+
+  /* SUBMIT ROW */
+  .form-submit {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; margin-top: 1.75rem;
+    padding-top: 1.5rem; border-top: 1px solid var(--surface-2);
+  }
+  .form-note { font-size: 0.74rem; color: var(--text-muted); max-width: 280px; line-height: 1.55; }
+  .form-note a { color: var(--blue); text-decoration: none; }
+
+  .btn-submit {
+    background: var(--green); color: var(--white);
+    padding: 1rem 2.2rem; border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.92rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; border: none; cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(46,204,138,0.35);
+    white-space: nowrap; flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .btn-submit:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(46,204,138,0.45); }
+  .btn-submit:active { transform: translateY(0); }
+  .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+
+  /* ── SUCCESS ── */
+  .form-success {
+    display: none; text-align: center;
+    padding: 4rem 1.5rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  .success-circle {
+    width: 88px; height: 88px; border-radius: 50%;
+    background: var(--green-pale); margin: 0 auto 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+  }
+  .form-success h3 { font-family: var(--font-display); font-size: 1.9rem; color: var(--ink); margin-bottom: 0.75rem; }
+  .form-success p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.75; max-width: 380px; margin: 0 auto 2rem; }
+  .back-home {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: var(--blue); font-weight: 700; font-size: 0.88rem;
+    text-decoration: none; padding: 0.8rem 1.8rem;
+    border: 2px solid var(--blue-pale); border-radius: 50px;
+    transition: all 0.2s;
+  }
+  .back-home:hover { background: var(--blue-pale); }
+
+  /* ── MOBILE COUNTDOWN (shown only on mobile) ── */
+  .mobile-countdown { display: none; }
+
+  /* ── RESPONSIVE ── */
+
+  /* Tablet */
+  @media (max-width: 960px) {
+    .page-wrapper { grid-template-columns: 1fr; }
+    .left-panel {
+      position: relative; top: 0; height: auto;
+      padding: 2.5rem 5%;
+      flex-direction: row; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .left-panel::before { display: none; }
+    .left-badge, .left-panel h1, .left-panel > p { width: 100%; }
+    .event-details { flex: 1; min-width: 240px; }
+    .left-steps-section { flex: 1; min-width: 240px; }
+    .right-panel { padding: 2.5rem 5%; }
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    nav { padding: 0.8rem 4%; }
+    .nav-logo { font-size: 1.1rem; }
+    .nav-back span { display: none; }
+
+    /* Countdown banner — compact on mobile */
+    .countdown-timer { gap: 0.35rem; }
+    .countdown-unit { min-width: 44px; padding: 0.35rem 0.5rem; }
+    .countdown-num { font-size: 1.3rem; }
+
+    /* Left panel stacked cleanly on mobile */
+    .left-panel { padding: 2rem 4%; flex-direction: column; gap: 1.25rem; }
+    .left-panel h1 { font-size: 1.6rem; }
+    .left-panel > p { display: none; } /* Hide on mobile to save space */
+    .event-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .event-detail { padding: 0.7rem 0.8rem; gap: 0.6rem; }
+    .event-detail-icon { width: 28px; height: 28px; font-size: 0.8rem; }
+    .event-detail-text strong { font-size: 0.76rem; }
+    .event-detail-text span { font-size: 0.68rem; }
+    .left-steps { display: none; } /* Hide steps on mobile */
+    .left-steps-title { display: none; }
+
+    /* Form panel */
+    .right-panel { padding: 1.75rem 4%; }
+    .form-header { margin-bottom: 1.5rem; }
+    .form-card { padding: 1.5rem 1.1rem; border-radius: 12px; }
+
+    /* Single column form on mobile */
+    .form-row { grid-template-columns: 1fr; gap: 0.85rem; margin-bottom: 0.85rem; }
+    .session-checks { grid-template-columns: 1fr; gap: 0.5rem; }
+
+    /* Bigger tap targets */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.9rem 1rem;
+      font-size: 1rem; /* Prevents iOS zoom */
+    }
+    .session-check { padding: 0.75rem 1rem; }
+
+    /* Submit row stacked */
+    .form-submit { flex-direction: column; align-items: stretch; gap: 1rem; }
+    .form-note { max-width: 100%; }
+    .btn-submit {
+      width: 100%; text-align: center;
+      padding: 1.1rem; font-size: 1rem;
+    }
+
+    /* Success */
+    .form-success { padding: 3rem 1rem; }
+    .form-success h3 { font-size: 1.5rem; }
+  }
+
+  @media (max-width: 380px) {
+    .event-details { grid-template-columns: 1fr; }
+    .countdown-unit { min-width: 38px; }
+    .countdown-num { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <!-- Replace 'your-logo.png' with your actual logo filename -->
+    <img class="nav-logo-img" src="your-logo.png" alt="AFES Logo" onerror="this.style.display='none'">
+    <span class="nav-logo-text">AFES<span>2025</span></span>
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    <span>Back to Main Page</span>
+  </a>
+</nav>
+
+<!-- PAGE BODY -->
+<div class="page-wrapper">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <div class="left-badge"><div class="left-badge-dot"></div>Registration Open</div>
+    <h1>Join Asia's<br><em>Energy Future</em><br>Summit 2025</h1>
+    <p>Secure your place among 2,500+ energy leaders, policymakers, and innovators. Fill in the form and our team will confirm your registration within 48 hours.</p>
+
+    <div class="event-details">
+      <div class="event-detail">
+        <div class="event-detail-icon">📅</div>
+        <div class="event-detail-text">
+          <strong>14 – 16 October 2025</strong>
+          <span>3-day full conference</span>
+        </div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail-icon">📍</div>
+        <div class="event-detail-text">
+          <strong>Sands Expo & Convention</strong>
+          <span>Marina Bay, Singapore</span>
+        </div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail-icon">👥</div>
+        <div class="event-detail-text">
+          <strong>2,500+ Attendees</strong>
+          <span>From 35+ countries</span>
+        </div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail-icon">🎤</div>
+        <div class="event-detail-text">
+          <strong>120+ Speakers</strong>
+          <span>Industry leaders & policymakers</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="left-steps-section">
+      <p class="left-steps-title">What happens next</p>
+      <div class="left-steps">
+        <div class="left-step">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Submit your registration</strong>Fill in all required fields and click submit.</div>
+        </div>
+        <div class="left-step">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Confirmation within 48hrs</strong>Our team will review and send a confirmation email.</div>
+        </div>
+        <div class="left-step">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Receive your access pass</strong>Your badge and event details will be sent closer to the date.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <div class="form-header">
+      <span class="section-label">Registration Form</span>
+      <h2>Complete Your <em>Registration</em></h2>
+      <p>All fields marked * are required.</p>
+    </div>
+
+    <div class="form-card">
+      <form id="registrationForm">
+
+        <!-- PERSONAL INFO -->
+        <span class="form-section-title">Personal Information</span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="e.g. Sarah" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="e.g. Chen" required autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@organisation.com" required autocomplete="email" inputmode="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+65 9123 4567" required autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <!-- PROFESSIONAL DETAILS -->
+        <span class="form-section-title">Professional Details</span>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="organisation">Organisation *</label>
+            <input type="text" id="organisation" name="organisation" placeholder="e.g. Tata Power Renewables" required autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="jobTitle">Job Title *</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Chief Strategy Officer" required autocomplete="organization-title">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required autocomplete="country-name">
+              <option value="" disabled selected>Select your country</option>
+              <option>Singapore</option>
+              <option>Malaysia</option>
+              <option>Indonesia</option>
+              <option>Thailand</option>
+              <option>Philippines</option>
+              <option>Vietnam</option>
+              <option>India</option>
+              <option>China</option>
+              <option>Japan</option>
+              <option>South Korea</option>
+              <option>Australia</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="attendeeType">I am registering as *</label>
+            <select id="attendeeType" name="attendeeType" required>
+              <option value="" disabled selected>Select category</option>
+              <option>Utility Executive / Grid Operator</option>
+              <option>Policymaker / Regulator</option>
+              <option>Investor / Financier</option>
+              <option>Technology Innovator / Startup</option>
+              <option>Sustainability Leader</option>
+              <option>Consultant / Advisor</option>
+              <option>Academic / Researcher</option>
+              <option>Media / Press</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <!-- SESSIONS -->
+        <span class="form-section-title">Sessions of Interest</span>
+        <div class="session-checks">
+          <label class="session-check"><input type="checkbox" name="sessions" value="Decarbonisation & Net Zero"><span>🌱 Decarbonisation & Net Zero</span></label>
+          <label class="session-check"><input type="checkbox" name="sessions" value="Renewables & Storage"><span>⚡ Renewables & Storage</span></label>
+          <label class="session-check"><input type="checkbox" name="sessions" value="Grid Modernisation"><span>🔌 Grid Modernisation</span></label>
+          <label class="session-check"><input type="checkbox" name="sessions" value="Digitalisation & AI"><span>💡 Digitalisation & AI</span></label>
+          <label class="session-check"><input type="checkbox" name="sessions" value="Energy Finance & Investment"><span>💰 Energy Finance & Investment</span></label>
+          <label class="session-check"><input type="checkbox" name="sessions" value="Energy Security & Policy"><span>🛡️ Energy Security & Policy</span></label>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <!-- ADDITIONAL -->
+        <span class="form-section-title">Additional Information</span>
+        <div class="form-group" style="margin-bottom:1rem">
+          <label for="dietaryReq">Dietary Requirements</label>
+          <input type="text" id="dietaryReq" name="dietaryReq" placeholder="e.g. Vegetarian, Halal, None">
+        </div>
+        <div class="form-group">
+          <label for="message">Anything else you'd like us to know?</label>
+          <textarea id="message" name="message" placeholder="Special requests, questions, accessibility needs..."></textarea>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="form-submit">
+          <p class="form-note">* Required fields. Your data is stored securely in accordance with our <a href="#">Privacy Policy</a>.</p>
+          <button type="submit" class="btn-submit">Complete Registration →</button>
+        </div>
+
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-circle">✅</div>
+        <h3>Registration Complete!</h3>
+        <p>Thank you for registering for AFES 2025. Our team will confirm your place within 48 hours. Please check your inbox for a confirmation email.</p>
+        <a href="index.html" class="back-home">← Back to Main Page</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ── COUNTDOWN (target: 23 April 2026, Malaysia Time UTC+8) ──
+  function updateCountdown() {
+    const now = new Date();
+    // Target date in MYT (UTC+8)
+    const target = new Date('2026-04-23T23:59:59+08:00');
+    const diff = target - now;
+
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent  = '00';
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-mins').textContent  = '00';
+      document.getElementById('cd-secs').textContent  = '00';
+      return;
+    }
+
+    const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ── POWER AUTOMATE FORM SUBMISSION ──
+  const POWER_AUTOMATE_URL = "https://default08f5913dd076402cad2189f61f125e.cd.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/f3304d99fb394afa924811af55a016dc/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OUdSOdEmNMV_7i8dR1SljUxA7QQ46a64s8aYVXcRmFY";
+
+  const form = document.getElementById("registrationForm");
+  if (form) {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector("button[type=submit]");
+      btn.textContent = "Submitting...";
+      btn.disabled = true;
+
+      const sessions = [...form.querySelectorAll('input[name="sessions"]:checked')]
+        .map(cb => cb.value).join(", ");
+
+      const payload = {
+        firstName:    form.firstName.value.trim(),
+        lastName:     form.lastName.value.trim(),
+        email:        form.email.value.trim(),
+        phone:        form.phone.value.trim(),
+        organisation: form.organisation.value.trim(),
+        jobTitle:     form.jobTitle.value.trim(),
+        country:      form.country.value,
+        attendeeType: form.attendeeType.value,
+        sessions:     sessions,
+        dietary:      form.dietaryReq.value.trim(),
+        message:      form.message.value.trim(),
+        submittedAt:  new Date().toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }) + ' MYT'
+      };
+
+      try {
+        const response = await fetch(POWER_AUTOMATE_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok || response.status === 202) {
+          form.style.display = "none";
+          document.getElementById("formSuccess").style.display = "block";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          throw new Error("Server error: " + response.status);
+        }
+      } catch (err) {
+        console.error("Submission error:", err);
+        btn.textContent = "Complete Registration →";
+        btn.disabled = false;
+        alert("Something went wrong. Please try again or contact us at info@afes2025.com");
+      }
+    });
+  }
+</script>
+</body>
+</html>
